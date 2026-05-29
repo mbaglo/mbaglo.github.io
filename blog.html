@@ -4,61 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | Chinyere Gloria Mbaka</title>
-  <style>
-    :root {
-      --bg: #f7f9fc;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #4b5563;
-      --accent: #1d4ed8;
-      --border: #e5e7eb;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 2rem 1.25rem;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    main {
-      padding: 2rem 1.25rem 3rem;
-    }
-    section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    h1, h2 { margin-top: 0; }
-    ul { padding-left: 1.25rem; }
-    footer {
-      padding: 2rem 1.25rem 3rem;
-      color: var(--muted);
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -69,6 +15,7 @@
         <a href="about.html">About</a>
         <a href="research.html">Research</a>
         <a href="blog.html">Blog</a>
+        <a href="cv.html">CV & Publications</a>
       </nav>
     </div>
   </header>
@@ -76,15 +23,33 @@
   <main>
     <div class="container">
       <section>
-        <h2>Research Notes and Reflections</h2>
-        <p>This page will host research notes, academic reflections, and technical writing related to my work in embedded systems, exposure science, and computational modeling.</p>
-      </section>
-
-      <section>
         <h2>Posts</h2>
-        <ul>
-          <li><a href="posts/first-post.html">Starting My Academic Website</a></li>
-        </ul>
+        <p class="muted">
+          This blog shares research reflections, technical notes, and updates from my doctoral journey
+          in Electrical and Computer Engineering.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3><a href="posts/first-post.html">Starting My Academic Website</a></h3>
+            <p class="meta">May 29, 2026</p>
+            <p>
+              An introduction to this academic website and the goals it serves in documenting
+              my research journey, technical work, and academic growth.
+            </p>
+            <a href="posts/first-post.html">Read post</a>
+          </article>
+
+          <article class="card">
+            <h3><a href="posts/second-post.html">Why Research Documentation Matters</a></h3>
+            <p class="meta">May 29, 2026</p>
+            <p>
+              A reflection on the role of documentation in graduate research, technical development,
+              and long-term academic growth.
+            </p>
+            <a href="posts/second-post.html">Read post</a>
+          </article>
+        </div>
       </section>
     </div>
   </main>
