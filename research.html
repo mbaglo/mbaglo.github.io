@@ -4,61 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | Chinyere Gloria Mbaka</title>
-  <style>
-    :root {
-      --bg: #f7f9fc;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #4b5563;
-      --accent: #1d4ed8;
-      --border: #e5e7eb;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 2rem 1.25rem;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    main {
-      padding: 2rem 1.25rem 3rem;
-    }
-    section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    h1, h2 { margin-top: 0; }
-    ul, ol { padding-left: 1.25rem; }
-    footer {
-      padding: 2rem 1.25rem 3rem;
-      color: var(--muted);
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -69,6 +15,7 @@
         <a href="about.html">About</a>
         <a href="research.html">Research</a>
         <a href="blog.html">Blog</a>
+        <a href="cv.html">CV & Publications</a>
       </nav>
     </div>
   </header>
@@ -77,40 +24,72 @@
     <div class="container">
       <section>
         <h2>Research Overview</h2>
-        <p>My research examines how product characteristics, use behavior, and exposure dynamics influence downstream exposure biomarkers, particularly nicotine and cotinine response.</p>
+        <p>
+          My research focuses on the design and application of sensing technologies, embedded systems,
+          and computational methods to better understand inhalant use behavior and exposure in real-world environments.
+        </p>
+        <p>
+          I am particularly interested in combining hardware-based monitoring, experimental measurement,
+          and data-driven modeling to generate insights that support exposure assessment and health-related research.
+        </p>
       </section>
 
       <section>
-        <h2>Research Areas</h2>
-        <ul>
-          <li>Embedded systems</li>
-          <li>Ambulatory sensing</li>
-          <li>Puff topography monitoring</li>
-          <li>Exposure science</li>
-          <li>Behavior-based yield modeling</li>
-          <li>Pharmacokinetic modeling</li>
-          <li>Signal processing</li>
-          <li>Machine learning</li>
-        </ul>
+        <h2>Core Research Areas</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Embedded Systems</h3>
+            <p>
+              Developing and integrating sensor-based systems for real-time monitoring and data collection.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Ambulatory Sensing</h3>
+            <p>
+              Designing tools and methods for capturing behavioral and environmental data in natural settings.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Puff Topography Monitoring</h3>
+            <p>
+              Studying puffing behavior using measurement systems that characterize inhalation patterns and usage behavior.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Exposure Science</h3>
+            <p>
+              Investigating how sensing and analytical methods can improve understanding of user exposure and intake.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Behavior-Based Yield Modeling</h3>
+            <p>
+              Exploring models that connect observed user behavior with estimated constituent delivery and exposure.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Pharmacokinetic Modeling</h3>
+            <p>
+              Applying model-based approaches to interpret uptake, distribution, and potential biological impact.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h2>Current Projects</h2>
-        <ul>
-          <li>Development and evaluation of Wireless Personal Use Monitors (wPUMs)</li>
-          <li>Natural-environment observation studies</li>
-          <li>Behavior-linked exposure and biomarker response analysis</li>
-          <li>Emissions testing and product characterization</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Selected Outputs</h2>
-        <ol>
-          <li>Ambulatory Puff Topography of Participants in a Weeklong Natural Environment Observation Study</li>
-          <li>Hyde Brand Electronic Cigarette Aerosol Emissions Characterization</li>
-          <li>Assessing Monitors for Characterizing the Natural Environment Puff Topography of Tobacco Product Users</li>
-        </ol>
+        <h2>Current Directions</h2>
+        <p>
+          My ongoing work includes the development of methods for ambulatory monitoring, the analysis of inhalant behavior,
+          and computational approaches for understanding exposure and yield under realistic usage conditions.
+        </p>
+        <p>
+          As this site grows, I plan to share project summaries, technical notes, research updates, and selected publications.
+        </p>
       </section>
     </div>
   </main>
