@@ -4,120 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chinyere Gloria Mbaka</title>
-  <style>
-    :root {
-      --bg: #f7f9fc;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #4b5563;
-      --accent: #1d4ed8;
-      --border: #e5e7eb;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 2rem 1.25rem;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    main {
-      padding: 2rem 1.25rem 3rem;
-    }
-    section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    h1, h2 { margin-top: 0; }
-    ul { padding-left: 1.25rem; }
-    .muted { color: var(--muted); }
-    footer {
-      padding: 2rem 1.25rem 3rem;
-      color: var(--muted);
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <div class="container">
       <h1>Chinyere Gloria Mbaka</h1>
-      <p><strong>Ph.D. Student in Electrical and Computer Engineering</strong><br>
-      Graduate Research Assistant, Respiratory Technologies Laboratory<br>
-      Rochester Institute of Technology</p>
+      <p class="muted">Ph.D. Student in Electrical and Computer Engineering | Rochester Institute of Technology</p>
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="research.html">Research</a>
         <a href="blog.html">Blog</a>
+        <a href="cv.html">CV & Publications</a>
       </nav>
     </div>
   </header>
 
   <main>
     <div class="container">
-      <section>
+      <section class="hero">
         <h2>Welcome</h2>
-        <p>I am a Ph.D. student in Electrical and Computer Engineering at the Rochester Institute of Technology and a Graduate Research Assistant in the Respiratory Technologies Laboratory. My work focuses on embedded sensing, puff topography monitoring, exposure science, behavior-based yield modeling, pharmacokinetic modeling, and data-driven analysis of inhalant product use.</p>
-        <p>My research examines how product characteristics, use behavior, and exposure dynamics influence downstream exposure biomarkers, particularly nicotine and cotinine response.</p>
+        <p>
+          Welcome to my academic website. I am a Ph.D. student in Electrical and Computer Engineering at the
+          Rochester Institute of Technology and a Graduate Research Assistant in the Respiratory Technologies Laboratory.
+        </p>
+        <p>
+          My research focuses on embedded sensing, ambulatory monitoring, puff topography, exposure science,
+          behavior-based yield modeling, pharmacokinetic modeling, and data-driven analysis of inhalant product use.
+        </p>
+        <a class="button-link" href="research.html">Explore My Research</a>
       </section>
 
-      <section>
-        <h2>Research Areas</h2>
-        <ul>
-          <li>Embedded systems</li>
-          <li>Ambulatory sensing</li>
-          <li>Puff topography monitoring</li>
-          <li>Exposure science</li>
-          <li>Behavior-based yield modeling</li>
-          <li>Pharmacokinetic modeling</li>
-          <li>Signal processing</li>
-          <li>Machine learning</li>
-        </ul>
-      </section>
+      <div class="grid">
+        <section class="card">
+          <h2>About Me</h2>
+          <p>Learn more about my academic background, professional experience, and research journey.</p>
+          <a href="about.html">Read more</a>
+        </section>
 
-      <section>
-        <h2>Current Work</h2>
-        <p>My current work includes the development and evaluation of Wireless Personal Use Monitors (wPUMs), support for natural-environment observation studies, and research on behavior-linked exposure and biomarker response.</p>
-      </section>
+        <section class="card">
+          <h2>Research</h2>
+          <p>Explore my research areas, current projects, and selected scholarly outputs.</p>
+          <a href="research.html">View research</a>
+        </section>
 
-      <section>
-        <h2>Links</h2>
-        <ul>
-          <li><a href="https://github.com/mbaglo">GitHub</a></li>
-          <li><a href="https://orcid.org/0000-0002-3293-0603">ORCID</a></li>
-          <li><a href="mailto:gm6629@rit.edu">Email</a></li>
-        </ul>
-      </section>
+        <section class="card">
+          <h2>Blog</h2>
+          <p>Read research notes, academic reflections, and technical writing from my Ph.D. journey.</p>
+          <a href="blog.html">Visit blog</a>
+        </section>
+      </div>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <p class="muted">Academic website of Chinyere Gloria Mbaka</p>
+      <p>Academic website of Chinyere Gloria Mbaka</p>
     </div>
   </footer>
 </body>
