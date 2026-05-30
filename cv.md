@@ -1,6 +1,7 @@
 ---
 title: CV & Publications
 layout: default
+permalink: /cv/
 ---
 
 ## CV & Publications
