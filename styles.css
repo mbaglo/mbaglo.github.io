@@ -51,6 +51,22 @@ body {
   background: #e6ebf7;
 }
 
+header h1 {
+  text-align: center;
+  margin: 0.3em 0 0.1em 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.site-tagline, header p.site-tagline {
+  text-align: center;
+  margin: 0 0 0.3em 0;
+  font-size: 1.12em;
+  font-style: italic;
+  color: #345;
+  font-weight: 400;
+}
+
 #main-content {
   max-width: 900px;
   margin: 2em auto 2em auto;
@@ -106,4 +122,5 @@ body {
   .site-nav { flex-wrap: wrap; padding: .3em .6em; }
   .site-nav a { font-size: 0.98em; padding: 0.36em 0.7em; }
   #main-content { border-radius: 7px; }
+  header h1 { font-size: 1.35em; }
 }
