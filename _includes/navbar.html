@@ -1,9 +1,8 @@
 <nav class="site-nav">
   <a href="/"{% if page.url == "/" %} class="active" aria-current="page"{% endif %}>Home</a>
-  <a href="/research.html"{% if page.url contains "research" %} class="active" aria-current="page"{% endif %}>Research</a>
-  <a href="/cv.html"{% if page.url contains "cv" %} class="active" aria-current="page"{% endif %}>CV</a>
-  <a href="/blog.html"{% if page.url contains "blog" %} class="active" aria-current="page"{% endif %}>Blog</a>
-  <a href="/gallery.html"{% if page.url contains "gallery" %} class="active" aria-current="page"{% endif %}>Gallery</a>
-  <a href="/about.html"{% if page.url contains "about" %} class="active" aria-current="page"{% endif %}>About</a>
-  <a href="/index.html"{% if page.url == "/index.html" or page.url == "/" %} class="active" aria-current="page"{% endif %}>Index</a>
+  <a href="/research/"{% if page.url contains '/research/' %} class="active" aria-current="page"{% endif %}>Research</a>
+  <a href="/cv/"{% if page.url contains '/cv/' %} class="active" aria-current="page"{% endif %}>CV</a>
+  <a href="/blog/"{% if page.url contains '/blog/' %} class="active" aria-current="page"{% endif %}>Blog</a>
+  <a href="/gallery/"{% if page.url contains '/gallery/' %} class="active" aria-current="page"{% endif %}>Gallery</a>
+  <a href="/about/"{% if page.url contains '/about/' %} class="active" aria-current="page"{% endif %}>About</a>
 </nav>
