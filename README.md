@@ -1,6 +1,6 @@
 # mbaglo.github.io
 
-This repository contains the source for the academic website of **Chinyere Gloria Mbaka**. The site is powered by [Jekyll](https://jekyllrb.com/) and published using GitHub Pages.
+This repository contains the source for the academic website of **Chinyere Gloria Mbaka**, powered by [Jekyll](https://jekyllrb.com/) and GitHub Pages.
 
 ## Site Structure
 
@@ -8,11 +8,11 @@ This repository contains the source for the academic website of **Chinyere Glori
 - `about.md` — Biography and academic background.
 - `research.md` — Research focus, projects, and current work.
 - `cv.md` — CV and selected publications/presentations.
-- [`_posts/`](https://github.com/mbaglo/mbaglo.github.io/tree/main/_posts) — Blog articles in Markdown format (one file per post, named `YYYY-MM-DD-title.md`).
+- [`_posts/`](https://github.com/mbaglo/mbaglo.github.io/tree/main/_posts) — Blog articles in Markdown format (`YYYY-MM-DD-title.md`).
 
 ## Blog
+To add a new blog post, create a Markdown file in the [`_posts/`](https://github.com/mbaglo/mbaglo.github.io/tree/main/_posts) directory, named as `YYYY-MM-DD-title-of-post.md`, with YAML front matter like:
 
-To add a new blog post, create a Markdown file in the [`_posts/`](https://github.com/mbaglo/mbaglo.github.io/tree/main/_posts) directory, named as `YYYY-MM-DD-title-of-post.md`, and include YAML front matter with at least:
 ```
 ---
 layout: post
@@ -32,4 +32,4 @@ This website presents academic background, research interests, and professional 
 This site is built and published with GitHub Pages from this repository.
 
 ---
-_Academic website of Chinyere Gloria Mbaka_
+Jekyll manages all global information like site title, author, and description via `_config.yml` and [Liquid](https://jekyllrb.com/docs/liquid/) variables, ensuring consistent display across all pages and in the layout header/footer. For updates, change your information in `_config.yml` — not in every file.
