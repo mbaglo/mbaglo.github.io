@@ -3,12 +3,13 @@ layout: post
 title: "Servo Control on STM32: Implementing State Machines and Recipe Execution"
 date: 2026-05-30
 description: "A comprehensive guide to building a dual-servo control system on STM32, featuring robust state machine management, UART-based user commands, and error handling."
+excerpt: "How to build a robust dual-servo control system on STM32 using state machines, UART commands, recipes, and reliable real-time techniques."
 tags: [STM32, Embedded Systems, C, Servo Control, State Machine, UART, Timers, PWM, Real Time]
 ---
 
 ## Project Overview
 
-This educational project demonstrates how to design and implement a robust dual-servo control system using an STM32 microcontroller. By utilizing structured state machines, PWM timer channels, user commands over UART, and error-handling, the system supports experimentations in embedded control.
+This educational project demonstrates how to design and implement a robust dual-servo control system using an STM32 microcontroller. By utilizing structured state machines, PWM timer channels, user command input via UART, and rigorous error handling, you can control complex servo movements reliably and extend the system for custom routines.
 
 ## Hardware and Peripherals
 
@@ -21,7 +22,7 @@ This educational project demonstrates how to design and implement a robust dual-
 ## Software Architecture
 
 ### 1. State Machine Framework
-The core of the servo control project is a finite state machine (FSM) for each servo (see `state_machine.h/.c`). Servo states include *paused, moving, waiting, looping, error*, and transitions occur on timer events, UART input (user commands), or recipe commands. Error states (like invalid loops) are safely managed.
+The core of the servo control project is a finite state machine (FSM) for each servo (see `state_machine.h/.c`). Servo states include *paused, moving, waiting, looping, error*, and transitions occur in response to user commands or recipe execution.
 
 ### 2. Recipe Execution
 A "recipe" is a programmatic instruction set stored as a byte array, interpreted at runtime. Recipes can move the servo to positions, pause, implement loops, or reverse direction. Example:
@@ -37,10 +38,11 @@ unsigned char recipe1[] = {
     RECIPE_END
 };
 ```
+
 Commands include `MOV`, `WAIT`, `LOOP`, `END_LOOP`, `REVERSE`, `RECIPE_END`.
 
 ### 3. UART User Commands
-UART2 is set for interrupt-driven communication. The system displays command options and accepts two-letter inputs (one per servo) for pause (P), continue (C), move R/L, begin recipe (B), cancel (X), or reverse (V). Valid commands immediately update FSM state.
+UART2 is set for interrupt-driven communication. The system displays command options and accepts two-letter inputs (one per servo) for pause (P), continue (C), move R/L, begin recipe (B), cancel (X), and reverse (V).
 
 | Command | Action                 |
 |---------|-----------------------|
@@ -112,4 +114,4 @@ This project demonstrates:
 - [Servo Control Source Code](https://github.com/mbaglo/MyProjects/tree/main/Real%20Time%20%26%20Embedded%20System/Project%202_Servo%20Control)
 
 ## Conclusion
-A structured state machine, flexible UI, and rigorous error handling illustrate best practices in STM32 servo/motor control. The code and concepts provide an excellent springboard for further robotics, automation, or broader embedded experimentation.
+A structured state machine, flexible UI, and rigorous error handling illustrate best practices in STM32 servo/motor control. The code and concepts provide an excellent springboard for further robust embedded development.
