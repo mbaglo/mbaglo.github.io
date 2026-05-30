@@ -4,6 +4,8 @@ layout: default
 permalink: /about/
 ---
 
+# About
+
 ## Biography
 I am Chinyere Gloria Mbaka, a Ph.D. student in Electrical and Computer Engineering at the Rochester Institute of Technology. I also serve as a Graduate Research Assistant in the Respiratory Technologies Laboratory, where I contribute to research involving sensing technologies, inhalant behavior monitoring, and computational analysis.
 
@@ -21,3 +23,6 @@ My academic and professional interests lie in embedded systems, ambulatory sensi
 My current work explores the development and evaluation of sensing systems for ambulatory monitoring, along with data analysis approaches that support exposure characterization, behavior-based yield estimation, and model-informed interpretation of inhalant product use.
 
 Through this website, I aim to share my research journey, technical work, academic growth, and reflections from doctoral study.
+
+---
+_Academic website of Chinyere Gloria Mbaka_
