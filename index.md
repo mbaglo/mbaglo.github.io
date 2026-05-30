@@ -3,12 +3,12 @@ title: Home
 layout: default
 ---
 
-<img src="/assets/img/gloria_mbaka_rit.jpg" alt="Chinyere Gloria Mbaka at RIT" style="width: 100%; max-width:1100px; display: block; margin: 0 auto 2rem auto; border-radius: 2.5rem; box-shadow: 0 10px 48px rgba(52,72,197,.21);" />
+<img src="/assets/img/gloria_mbaka_rit.jpg" alt="Chinyere Gloria Mbaka at RIT" style="width: 100%; max-width:1100px; display: block; margin: 0 auto 2rem auto; border-radius: 2.5rem; box-shadow: 0 12px 56px #abc3dd44;">
 
 # Hi, I'm Gloria!
 ### Ph.D. Student in Electrical & Computer Engineering @ RIT
 
-I love **embedded systems**, **data analysis**, and bringing a little joy to every research adventure.  
+My research interests include embedded systems and data analysis and their applications.
 Use the navigation above to explore my projects, blog, CV, and photo gallery!
 
 ---
