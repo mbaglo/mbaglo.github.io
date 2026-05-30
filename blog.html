@@ -1,81 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Chinyere Gloria Mbaka</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Blog</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="blog.html">Blog</a>
-        <a href="cv.html">CV & Publications</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="container">
-      <section>
-        <h2>Posts</h2>
-        <p class="muted">
-          This blog shares research reflections, technical notes, and updates from my doctoral journey
-          in Electrical and Computer Engineering.
-        </p>
-
-        <div class="grid">
-          <article class="card">
-            <h3><a href="posts/first-post.html">Starting My Academic Website</a></h3>
-            <p class="meta">May 29, 2026</p>
-            <p>
-              An introduction to this academic website and the goals it serves in documenting
-              my research journey, technical work, and academic growth.
-            </p>
-            <a href="posts/first-post.html">Read post</a>
-          </article>
-
-          <article class="card">
-            <h3><a href="posts/second-post.html">Why Research Documentation Matters</a></h3>
-            <p class="meta">May 29, 2026</p>
-            <p>
-              A reflection on the role of documentation in graduate research, technical development,
-              and long-term academic growth.
-            </p>
-            <a href="posts/second-post.html">Read post</a>
-          </article>
-
-          <article class="card">
-              <h3><a href="posts/2026-05-29-stm32-pulse-timing.html">Building a Pulse Timing Measurement Tool with STM32 Input Capture</a></h3>
-              <p class="meta">May 29, 2026</p>
-              <p>
-                A blog post about measuring pulse timing in microseconds with STM32 timers, input capture interrupts, UART interaction, and histogram-based signal analysis.
-              </p>
-              <a href="posts/2026-05-29-stm32-pulse-timing.html">Read post</a>
-            </article>
-
-          <article class="card">
-            <h3><a href="posts/2026-05-30-stm32-servo-control.html">Servo Control on STM32: Implementing State Machines and Recipe Execution</a></h3>
-            <p class="meta">May 30, 2026</p>
-            <p>
-              A comprehensive guide to building a dual-servo control system on STM32, featuring robust state machine management, UART-based user commands, and error handling.
-            </p>
-            <a href="posts/2026-05-30-stm32-servo-control.html">Read post</a>
-          </article>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>Academic website of Chinyere Gloria Mbaka</p>
-    </div>
-  </footer>
-</body>
-</html>
+---
+layout: default
+title: Blog
+---
+<h2>Blog</h2>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> <small>{{ post.date | date: "%B %d, %Y" }}</small>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
