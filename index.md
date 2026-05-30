@@ -3,15 +3,17 @@ title: Home
 layout: default
 ---
 
-<div style="text-align: center; margin-top: 2.5rem;">
-  <img src="/assets/img/gloria_mbaka_rit.jpg" alt="Chinyere Gloria Mbaka at RIT"
-    style="width: 200px; max-width: 35vw; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 8px 32px rgba(52,72,197,.18); margin-bottom: 1.3rem; border: 6px solid #eaf1fd;">
-  <h1 style="margin-bottom: .4rem; color: #3448c5;">Hi, I'm Gloria!</h1>
-  <h3 style="margin-top: 0; margin-bottom: 1rem; color: #4681f4; font-weight:500;">
+![Chinyere Gloria Mbaka at RIT](/assets/img/gloria_mbaka_rit.jpg){: style="width: 100%; max-width:1100px; display: block; margin: 0 auto 2rem auto; border-radius: 2.5rem; box-shadow: 0 10px 48px rgba(52,72,197,.21);" }
+
+<div style="text-align: center; margin-bottom: 2.5rem;">
+  <h1 style="color: #3448c5; margin-bottom:.2em;">Hi, I'm Gloria!</h1>
+  <h3 style="color: #4681f4; font-weight:500; margin-top:.2em; margin-bottom: 1em;">
     Ph.D. Student in Electrical & Computer Engineering @ RIT
   </h3>
-  <p style="font-size: 1.19rem; line-height:1.7; color: #28262c; max-width: 500px; margin: 0 auto;">
-    Welcome! My research interest is <b>embedded systems</b>, <b>data analysis</b>, and finding the fun in every PhD adventure. Explore my projects, blog, CV, and photo gallery using the navigation above.
+  <p style="font-size: 1.15rem; line-height:1.7; color:#28262c; max-width: 600px; margin:0 auto;">
+    I love <b>embedded systems</b>, <b>data analysis</b>, and bringing a little joy to every research adventure.
+    <br>
+    Use the navigation above to explore my projects, blog, CV, and photo gallery!
   </p>
 </div>
 
