@@ -6,35 +6,26 @@ permalink: /research/
 
 # Research
 
-## Research Overview
-My research focuses on the design and application of sensing technologies, embedded systems, and computational methods to better understand inhalant use behavior and environmental exposures in real-world settings.
-
-I am particularly interested in combining hardware-based monitoring, experimental measurement, and data-driven modeling to generate insights that support exposure assessment and health-related research.
+My research focuses on sensing technology, embedded systems, and computational methods to better understand inhalant use behavior and environmental exposures. I especially enjoy combining hardware-based monitoring, experiments, and data-driven modeling to improve assessment and health insights.
 
 ## Core Research Areas
 
 ### Embedded Systems
-Developing and integrating sensor-based systems for real-time monitoring and data collection.
+- Sensor systems for real-time monitoring and data collection
 
 ### Ambulatory Sensing
-Designing tools and methods for capturing behavioral and environmental data in natural settings.
+- Capturing behavioral/environmental data in natural settings
 
 ### Puff Topography Monitoring
-Studying puffing behavior using measurement systems that characterize inhalation patterns and usage behavior.
+- Quantifying inhalation patterns and usage behavior
 
 ### Exposure Science
-Investigating how sensing and analytical methods can improve understanding of user exposure and intake.
+- Using sensing and analytics for more accurate exposure assessment
 
 ### Behavior-Based Yield Modeling
-Exploring models that connect observed user behavior with estimated constituent delivery and exposure.
+- Connecting observed user behavior with exposure estimates
 
 ### Pharmacokinetic Modeling
-Applying model-based approaches to interpret uptake, distribution, and potential biological impact.
+- Model-based analysis of constituent uptake, distribution, and effects
 
-## Current Directions
-My ongoing work includes the development of methods for ambulatory monitoring, the analysis of inhalant behavior, and computational approaches for understanding exposure and yield under realistic usage conditions.
-
-As this site grows, I plan to share project summaries, technical notes, research updates, and selected publications.
-
----
-_Academic website of Chinyere Gloria Mbaka_
+Currently, I’m working on improved methods for ambulatory monitoring and computational analysis for inhalant product use. Project notes, research summaries, and select publications will be shared here.
