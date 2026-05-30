@@ -1,82 +1,148 @@
 ---
 layout: post
-title: "Building a Pulse Timing Measurement Tool with STM32 Input Capture"
+title: "Pulse Timing Measurement on STM32: Input Capture, UART UI, and Statistical Analysis"
 date: 2026-05-29
-description: "A blog post about measuring pulse timing in microseconds with STM32 timers, input capture interrupts, UART interaction, and histogram-based signal analysis."
-tags: [STM32, Embedded Systems, C, Microcontrollers, UART, Timers]
+description: "A detailed guide to developing a pulse-timing measurement tool on STM32 using input capture interrupts, microsecond-scale timing, UART user interface, and histogram analysis of signal stability."
+tags: [STM32, Embedded Systems, C, Microcontrollers, Timers, UART, Measurement, Signal Analysis]
 ---
 
-Accurate timing is one of the most important parts of embedded systems design. In this project, I built a pulse timing measurement tool using an STM32 microcontroller to detect an incoming signal, [...]
+## Project Overview
 
-The project uses **TIM2 input capture** to record two consecutive rising edges and calculate the time difference between them. Since the timer prescaler is configured so the counter runs at **1 MH[...]
+This project demonstrates how to design a high-precision pulse timing measurement system on an STM32 microcontroller. Leveraging the hardware timer's input capture mode, along with a UART-based user interface and real-time statistical analysis, this project can evaluate the stability and quality of digital pulse signals with microsecond resolution.
 
-## Project Goal
+---
 
-The goal of this project was to create a simple embedded measurement system that could:
+## Hardware and Peripherals
 
-- detect whether an input signal is present,
-- measure pulse timing with microsecond resolution,
-- allow the user to define a timing range through UART,
-- collect 1000 valid measurements, and
-- summarize the results in a histogram-style table.
+- **Microcontroller:** STM32L4 series (compatible with other STM32s with timer capture)
+- **Signal Input:** Digital signal routed to a timer input capture pin
+- **UART2:** Used for configuration and displaying results
+- **Timers:** TIM2 in input capture mode
+- **No display required:** Results via UART
 
-This makes the project useful for evaluating how stable or noisy a repeated signal is over time.
+---
 
-## How It Works
+## System Architecture
 
-The firmware begins with a **power-on self-test (POST)**. During this step, the program starts the input capture peripheral and waits briefly for a signal. If a capture event occurs, the system re[...]
+The firmware for this project is modular, dividing key functionality as follows:
 
-After POST, the program displays the current lower and upper pulse-width limits through **UART2**. By default, the lower limit is **950 µs** and the upper limit is **1050 µs**, but the user can [...]
+### 1. Power-On Self-Test (POST)
+- At startup, the STM32 initializes all hardware and begins a brief POST.
+- The program waits for a valid pulse signal on the input capture pin, ensuring hardware readiness before measurements begin.
+- If no signal is detected, the system can notify the user and halt further operation.
 
-Once configuration is complete, the STM32 starts collecting input capture events. The interrupt callback stores two captured timer values:
+### 2. User Configuration (via UART)
+- After POST, the user is prompted—over UART—to configure a pulse width window of interest (lower and upper bounds, in microseconds).
+- Default window is 950 μs – 1050 μs, but these can be altered via UART commands before measurement begins.
 
-- the first rising edge timestamp,
-- the second rising edge timestamp.
+**UART menu excerpt:**
+```
+Enter lower and upper pulse width limits (in microseconds): 
+(Default: 950 1050) 
+```
 
-The difference between these two values represents the measured pulse period.
+### 3. Input Capture & Measurement
 
-## Timing and Signal Processing
+- **Timer Setup:** TIM2 is configured so that, after prescaling, one timer count = 1 μs.
+- **Input Capture Interrupt:** Each rising edge triggers the capture callback, storing the timer value.
+- The difference between two consecutive rising edges yields the pulse period in microseconds.
 
-A key part of this project is the timer setup. With the prescaler set to **79**, the timer clock is reduced so that the counter increments once every microsecond. That means the difference between[...]
+**Timer and ISR code excerpt:**
+```c
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
+    if (Is_First_Captured == 0) {
+        IC_Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+        Is_First_Captured = 1;
+    } else if (Is_First_Captured == 1) {
+        IC_Val2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+        Is_Second_Captured = 1;
+    }
+}
+```
 
-When a pulse measurement falls within the selected timing window, it is stored in one of **101 histogram buckets**. Each bucket corresponds to a specific microsecond value between the lower and up[...]
+- If the measured period is within the configured window, it is saved to a histogram bucket.
 
-This design allows the program to do more than just calculate an average. Instead, it shows the full distribution of valid pulse widths, which makes it easier to identify timing variation, cluster[...]
+### 4. Histogram and Signal Statistics
 
-## Output
+- The firmware maintains a histogram array (101 buckets by default) corresponding to each possible pulse width in the selected range.
+- For each valid measurement, the count in the appropriate bucket is incremented.
+- Once a preset number of valid measurements (default: 1000) is reached, the system summarizes and prints the entire histogram via UART.
 
-After **1000 valid measurements** are collected, the program stops input capture and prints the results as a UART table showing:
+**Analysis code snippet:**
+```c
+if (period >= lower_limit && period <= upper_limit) {
+    bucket[period - lower_limit]++;
+    capture_done++;
+}
+```
 
-- the time value in microseconds,
-- the number of times that value occurred.
+---
 
-This output gives a quick summary of signal behavior and helps visualize how consistent the timing is.
+## Output Format
 
-## What I Learned
+Once data collection is complete, the firmware outputs a formatted summary (over UART) showing:
 
-This project helped me strengthen my understanding of several important embedded systems concepts:
+- Each pulse width (in μs) within the configured window
+- The number of times it was observed
 
-- configuring STM32 timers for precise measurement,
-- using **input capture interrupts** for event timing,
-- building a simple **UART-based user interface**,
-- organizing measurement data into histogram buckets,
-- and combining hardware peripherals to create a practical diagnostic tool.
+Sample output (UART):
 
-It also showed how low-level peripherals like timers and UART can be combined to build a complete measurement application with both data collection and user interaction.
+```
+Pulse Width (us)    Count
+950                 0
+951                 2
+...
+1000                700
+...
+1050                0
+```
+
+This allows rapid, statistical analysis of signal quality and repeatability.
+
+---
+
+## Educational Value & Technical Insights
+
+This project covers important embedded systems concepts:
+- **Timer/Counter configuration** for microsecond precision
+- **Input capture interrupts** for event-driven measurement
+- **UART menu interaction** for flexible, user-configurable data acquisition
+- **Statistical data collection** (histograms) to analyze signal jitter, instability, or noise
+- **Robust startup procedures** (POST) for verifying hardware function before use
+
+### Block Diagram
+
+```
++------------------+            +------------------------------+
+| Signal Source    |--(GPIO)->--| [STM32] TIM2 Input Capture   |
++------------------+            +-----------+------------------+
+                                         |
+         +-------------------------------+
+         |
++-----------------------+
+|      UART Output      |---(PC/Terminal)
++-----------------------+
+```
+
+---
 
 ## Possible Improvements
 
-If I continue developing this project, I would like to add:
+For further extension and robustness, consider:
+- **Timer overflow/rollover detection** for handling long periods
+- **Noise rejection/filtering** for unstable signals
+- **Data export in CSV format** for easier PC-based plotting
+- **Real-time graphical display** (e.g., plotting histograms)
+- **Calibration UI** for automatic window finding
 
-- explicit handling for timer counter overflow,
-- input filtering for noisy or unstable signals,
-- configurable upper and lower bounds,
-- CSV-style serial output for easier logging,
-- and possibly a graphical visualization tool on the PC side.
+---
 
-## Final Thoughts
+## Source Code and Resources
 
-Overall, this project is a strong example of how embedded systems can be used for precise real-time measurement. By combining **STM32 timers**, **interrupt-based capture**, and **UART communicatio[...]
+- [Pulse Timing Project Code (GitHub)](https://github.com/mbaglo/MyProjects/tree/main/Real%20Time%20%26%20Embedded%20System/Project%201_Timing)
 
-Projects like this are a great way to move beyond basic microcontroller exercises and start building systems that solve real measurement and debugging problems.
+---
 
+## Conclusion
+
+This STM32-based real-time measurement system is a practical example of applying hardware timers, interrupt-driven acquisition, and statistical analysis to a fundamental embedded problem. The open design and parameterization allow anyone to adapt it for new timing measurement challenges, signal analysis, or as a diagnostic tool in more complex systems.
