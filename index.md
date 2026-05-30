@@ -16,12 +16,12 @@ Use the navigation above to explore my projects, blog, CV, and photo gallery!
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-start; margin: 3rem 0 0 0;">
   <div style="flex:1 1 220px; max-width:260px; background: #f4f8fd; border-radius:1em; padding:1.2em; border:1.5px solid #d4e3fa;">
     <b>Projects</b><br>
-    <span style="color:#4681f4">Gadgets, sensing, & data insights.</span><br>
+    <span style="color:#4681f4">Hands-on projects and labs.</span><br>
     <a href="/research/" style="color: #4681f4; text-decoration: underline;">Explore my projects</a>
   </div>
   <div style="flex:1 1 220px; max-width:260px; background: #faf6e0; border-radius:1em; padding:1.2em; border:1.5px solid #f5eab0;">
     <b>Blog</b><br>
-    <span style="color:#b68900">Tips, fails, and discoveries.</span><br>
+    <span style="color:#b68900">Research updates and personal insights.</span><br>
     <a href="/blog/" style="color: #b68900; text-decoration: underline;">Read the blog</a>
   </div>
   <div style="flex:1 1 220px; max-width:260px; background:#eafcf4; border-radius:1em; padding:1.2em; border:1.5px solid #87dec3;">
@@ -31,7 +31,7 @@ Use the navigation above to explore my projects, blog, CV, and photo gallery!
   </div>
   <div style="flex:1 1 220px; max-width:260px; background:#fcf0f8; border-radius:1em; padding:1.2em; border:1.5px solid #efbee8;">
     <b>Gallery</b><br>
-    <span style="color:#d05cb4;">Fun snapshots & lab life.</span><br>
+    <span style="color:#d05cb4;">Photo highlights from research and activities.</span><br>
     <a href="/gallery/" style="color:#d05cb4; text-decoration: underline;">See the photos</a>
   </div>
 </div>
@@ -46,10 +46,10 @@ Use the navigation above to explore my projects, blog, CV, and photo gallery!
 <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" target="_blank" style="margin-right:1em;">
   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar" width="28" style="vertical-align:middle;"> Scholar
 </a>
-<a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" style="margin-right:1em;">
+<a href="https://www.linkedin.com/in/gloriambaka" target="_blank" style="margin-right:1em;">
   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="28" style="vertical-align:middle;"> LinkedIn
 </a>
-<a href="mailto:YOUR-EMAIL@rit.edu" target="_blank">
+<a href="mailto:gm6629@rit.edu" target="_blank">
   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" width="28" style="vertical-align:middle;"> Email
 </a>
 
