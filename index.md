@@ -4,7 +4,7 @@ layout: default
 ---
 
 <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
-  <img src="/assets/img/gloria_mbaka.jpg" alt="Chinyere Gloria Mbaka at RIT" style="max-width: 260px; border-radius: 1.5rem; box-shadow: 0 6px 20px rgba(20,30,60,.15);">
+  <img src="/assets/img/gloria_mbaka_rit.jpg" alt="Chinyere Gloria Mbaka at RIT" style="max-width: 260px; border-radius: 1.5rem; box-shadow: 0 6px 20px rgba(20,30,60,.15);">
   <div>
     <h1 style="margin-bottom: .5rem;">Hi, I’m Chinyere Gloria Mbaka</h1>
     <h3 style="margin-top: 0; margin-bottom: 1rem; color: #4681f4; font-weight:600;">
@@ -25,24 +25,10 @@ layout: default
 ## Gallery {#gallery}
 
 <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: flex-start;">
-
   <figure style="flex: 0 1 220px; margin: 0;">
-    <img src="/assets/img/gloria_mbaka.jpg" alt="Gloria in the lab" style="width: 100%; border-radius: 1em; border: 3px solid #eee;">
+    <img src="/assets/img/gloria_mbaka_rit.jpg" alt="Gloria in the lab" style="width: 100%; border-radius: 1em; border: 3px solid #eee;">
     <figcaption style="font-size: .95em; margin-top:.3em; color:#444;">At RIT lab – 2024</figcaption>
   </figure>
-  <figure style="flex: 0 1 220px; margin: 0;">
-    <img src="/assets/img/gallery2.jpg" alt="Presenting at conference" style="width: 100%; border-radius: 1em; border: 3px solid #eee;">
-    <figcaption style="font-size: .95em; margin-top:.3em; color:#444;">Presenting at Embedded Systems Summit</figcaption>
-  </figure>
-  <figure style="flex: 0 1 220px; margin: 0;">
-    <img src="/assets/img/gallery3.jpg" alt="Mentoring students" style="width: 100%; border-radius: 1em; border: 3px solid #eee;">
-    <figcaption style="font-size: .95em; margin-top:.3em; color:#444;">Mentoring at STEM Outreach Day</figcaption>
-  </figure>
-  <figure style="flex: 0 1 220px; margin: 0;">
-    <img src="/assets/img/gallery4.jpg" alt="Project hardware" style="width: 100%; border-radius: 1em; border: 3px solid #eee;">
-    <figcaption style="font-size: .95em; margin-top:.3em; color:#444;">Pulse-timing hardware prototype</figcaption>
-  </figure>
-
 </div>
 
 ---
@@ -50,7 +36,6 @@ layout: default
 ## What I Do
 
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom:2rem;">
-
   <div style="flex:1 0 180px; background:#f4f8fd; border-radius:1em; padding:1.2em;">
     <b>Research & Projects</b><br>
     <span style="color:#4681f4">Novel devices, algorithms, and real-world deployments.</span><br>
@@ -71,7 +56,6 @@ layout: default
     <span style="color:#125c72;">Bio, background, values & journey so far.</span><br>
     <a href="/about/" style="color: #125c72;">More About Me</a>
   </div>
-
 </div>
 
 ---
