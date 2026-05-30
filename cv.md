@@ -4,11 +4,27 @@ layout: default
 permalink: /cv/
 ---
 
-## CV & Publications
+# CV & Publications
 
-You can download my full CV [here](cv.pdf).
+## Curriculum Vitae
+You can download my current Curriculum Vitae (CV) using the link below:
 
-### Selected Publications
-- (Publication list coming soon)
+- [Download CV (PDF)](/files/4_29_2026_Gloria_Mbaka_CV.pdf)
 
-<!-- Add detailed publication/bio/CV info as needed. -->
+## Research Interests
+- Embedded systems
+- Ambulatory sensing
+- Puff topography monitoring
+- Exposure science
+- Computational modeling
+- Behavior-based yield modeling
+- Pharmacokinetic modeling
+
+## Selected Publications
+A selected list of publications will be added here.
+
+## Presentations & Posters
+Conference presentations, posters, and scholarly talks will be added here.
+
+---
+_Academic website of Chinyere Gloria Mbaka_
