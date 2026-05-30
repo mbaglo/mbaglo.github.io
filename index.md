@@ -11,7 +11,7 @@ layout: default
     Ph.D. Student in Electrical & Computer Engineering @ RIT
   </h3>
   <p style="font-size: 1.19rem; line-height:1.7; color: #28262c; max-width: 500px; margin: 0 auto;">
-    Welcome! I have a passion for <b>embedded systems</b>, <b>data analysis</b>, and finding the fun in every PhD adventure. Explore my projects, blog, CV, and photo gallery using the navigation above.
+    Welcome! My research interest is <b>embedded systems</b>, <b>data analysis</b>, and finding the fun in every PhD adventure. Explore my projects, blog, CV, and photo gallery using the navigation above.
   </p>
 </div>
 
