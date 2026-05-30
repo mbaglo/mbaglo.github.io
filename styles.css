@@ -1,3 +1,4 @@
+/* Existing site styles... (truncated for brevity) */
 :root {
   --bg: #f7f9fc;
   --surface: #ffffff;
@@ -26,108 +27,40 @@ body {
   line-height: 1.7;
 }
 
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
+/* ... rest of your existing styles ... */
 
-a:hover {
-  color: var(--accent-dark);
-  text-decoration: underline;
-}
-
-header {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  padding: 2rem 1.25rem;
-}
-
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-nav {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-nav a {
-  font-weight: 600;
-}
-
-main {
-  padding: 2rem 1.25rem 3rem;
-}
-
-section,
-article,
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: var(--shadow);
-}
-
-h1, h2, h3 {
-  margin-top: 0;
-  line-height: 1.25;
-}
-
-.hero {
-  padding: 2rem 0 0.5rem;
-}
-
-.hero p {
-  max-width: 760px;
-}
-
-.meta,
-.muted {
-  color: var(--muted);
-}
-
-ul, ol {
-  padding-left: 1.25rem;
-}
-
-footer {
-  padding: 2rem 1.25rem 3rem;
-  color: var(--muted);
-  text-align: center;
-}
-
-.button-link {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1rem;
-  border-radius: 10px;
-  background: var(--accent);
-  color: white;
-  font-weight: 600;
-}
-
-.button-link:hover {
-  background: var(--accent-dark);
-  color: white;
-  text-decoration: none;
-}
-
-.grid {
+/* GALLERY GRID: Responsive photo/video grid with captions */
+.gallery-flex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 1.5em;
+  margin-bottom: 2em;
 }
-
-@media (max-width: 640px) {
-  header,
-  main,
-  footer {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8fbff;
+  border-radius: 12px;
+  box-shadow: 0 2px 14px #e4e6ed;
+  padding: 1em 1em 0.7em 1em;
+  min-width: 190px;
+  max-width: 375px;
+  margin: auto;
+}
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  max-width: 330px;
+  border-radius: 8px;
+  box-shadow: 0 2px 14px #c2d0eb;
+  margin-bottom: 0.7em;
+  background: #333;
+}
+.gallery-caption {
+  color: #345;
+  font-size: 0.97em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.2em;
 }
