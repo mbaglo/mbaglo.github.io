@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
-      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-      <nav>
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-        <a href="{{ '/about.html' | relative_url }}">About</a>
-      </nav>
+      <div class="container">
+        <h1 style="margin:0;">
+          <a href="{{ '/' | relative_url }}" style="text-decoration:none; color:inherit;">{{ site.title }}</a>
+        </h1>
+        <p class="site-tagline">PhD Research • Embedded Systems • RIT</p>
+        <nav>
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/about.md' | relative_url }}">About</a>
+          <a href="{{ '/blog.md' | relative_url }}">Blog</a>
+          <a href="{{ '/cv.md' | relative_url }}">CV & Publications</a>
+          <a href="{{ '/research.md' | relative_url }}">Research</a>
+        </nav>
+      </div>
     </header>
-    <main>
-      {{ content }}
-    </main>
+
+    <div class="container">
+      <main>
+        {{ content }}
+      </main>
+    </div>
+
     <footer>
-      <p>&copy; {{ site.title }}</p>
+      <div class="container">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} &mdash; Academic website of Chinyere Gloria Mbaka</p>
+      </div>
     </footer>
   </body>
 </html>
