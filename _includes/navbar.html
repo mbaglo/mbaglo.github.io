@@ -5,4 +5,5 @@
   <a href="/blog.html"{% if page.url contains "blog" %} class="active" aria-current="page"{% endif %}>Blog</a>
   <a href="/gallery.html"{% if page.url contains "gallery" %} class="active" aria-current="page"{% endif %}>Gallery</a>
   <a href="/about.html"{% if page.url contains "about" %} class="active" aria-current="page"{% endif %}>About</a>
+  <a href="/index.html"{% if page.url == "/index.html" or page.url == "/" %} class="active" aria-current="page"{% endif %}>Index</a>
 </nav>
