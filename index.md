@@ -26,13 +26,7 @@ layout: default
 
 ## Gallery {#gallery}
 
-<div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: flex-start;">
-  <figure style="flex: 0 1 220px; margin: 0;">
-    <img src="/assets/img/gloria_mbaka_rit.jpg" alt="Gloria at RIT" style="width: 100%; border-radius: 1em; border: 3px solid #eee;">
-    <figcaption style="font-size: .95em; margin-top:.3em; color:#444;">One of many adventures!</figcaption>
-  </figure>
-  <!-- Add more <figure> blocks as you collect more fun snapshots -->
-</div>
+<!-- Gallery intentionally left empty until more photos are uploaded. Add new <figure> elements as you add more images! -->
 
 ---
 
