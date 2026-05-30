@@ -5,21 +5,15 @@ layout: default
 
 ![Chinyere Gloria Mbaka at RIT](/assets/img/gloria_mbaka_rit.jpg){: style="width: 100%; max-width:1100px; display: block; margin: 0 auto 2rem auto; border-radius: 2.5rem; box-shadow: 0 10px 48px rgba(52,72,197,.21);" }
 
-<div style="text-align: center; margin-bottom: 2.5rem;">
-  <h1 style="color: #3448c5; margin-bottom:.2em;">Hi, I'm Gloria!</h1>
-  <h3 style="color: #4681f4; font-weight:500; margin-top:.2em; margin-bottom: 1em;">
-    Ph.D. Student in Electrical & Computer Engineering @ RIT
-  </h3>
-  <p style="font-size: 1.15rem; line-height:1.7; color:#28262c; max-width: 600px; margin:0 auto;">
-    I love <b>embedded systems</b>, <b>data analysis</b>, and bringing a little joy to every research adventure.
-    <br>
-    Use the navigation above to explore my projects, blog, CV, and photo gallery!
-  </p>
-</div>
+# Hi, I'm Gloria!
+### Ph.D. Student in Electrical & Computer Engineering @ RIT
+
+I love **embedded systems**, **data analysis**, and bringing a little joy to every research adventure.  
+Use the navigation above to explore my projects, blog, CV, and photo gallery!
 
 ---
 
-<div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 3rem 0 0 0;">
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-start; margin: 3rem 0 0 0;">
   <div style="flex:1 1 220px; max-width:260px; background: #f4f8fd; border-radius:1em; padding:1.2em; border:1.5px solid #d4e3fa;">
     <b>Projects</b><br>
     <span style="color:#4681f4">Gadgets, sensing, & data insights.</span><br>
