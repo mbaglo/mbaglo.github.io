@@ -2,13 +2,14 @@
 layout: post
 title: "Pulse Timing Measurement on STM32: Input Capture, UART UI, and Statistical Analysis"
 date: 2026-05-29
-description: "A detailed guide to developing a pulse-timing measurement tool on STM32 using input capture interrupts, microsecond-scale timing, UART user interface, and histogram analysis of signal stability."
+description: "A detailed guide to developing a pulse-timing measurement tool on STM32 using input capture interrupts, microsecond-scale timing, UART user interface, and histogram analysis of signals."
+excerpt: "A practical guide to accurate pulse measurement, histogramming, and signal analysis on STM32 microcontrollers with flexible UART user interface."
 tags: [STM32, Embedded Systems, C, Microcontrollers, Timers, UART, Measurement, Signal Analysis]
 ---
 
 ## Project Overview
 
-This project demonstrates how to design a high-precision pulse timing measurement system on an STM32 microcontroller. Leveraging the hardware timer's input capture mode, along with a UART-based user interface and real-time statistical analysis, this project can evaluate the stability and quality of digital pulse signals with microsecond resolution.
+This project demonstrates how to design a high-precision pulse timing measurement system on an STM32 microcontroller. Leveraging the hardware timer's input capture mode, along with a UART-based user interface, the project enables the measurement of signal pulse widths with microsecond accuracy, and the statistical analysis of variability using real-time histogramming.
 
 ---
 
@@ -86,7 +87,6 @@ Once data collection is complete, the firmware outputs a formatted summary (over
 - The number of times it was observed
 
 Sample output (UART):
-
 ```
 Pulse Width (us)    Count
 950                 0
@@ -145,4 +145,4 @@ For further extension and robustness, consider:
 
 ## Conclusion
 
-This STM32-based real-time measurement system is a practical example of applying hardware timers, interrupt-driven acquisition, and statistical analysis to a fundamental embedded problem. The open design and parameterization allow anyone to adapt it for new timing measurement challenges, signal analysis, or as a diagnostic tool in more complex systems.
+This STM32-based real-time measurement system is a practical example of applying hardware timers, interrupt-driven acquisition, and statistical analysis to a fundamental embedded problem. The open-source code and architectural concepts serve as a foundation for further experimentation and educational projects.
