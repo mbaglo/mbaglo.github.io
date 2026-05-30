@@ -1,0 +1,168 @@
+---
+layout: post
+title: "Servo Control on STM32: Implementing State Machines and Recipe Execution"
+date: 2026-05-30
+description: "A comprehensive guide to building a dual-servo control system on STM32, featuring robust state machine management, UART-based user commands, and error handling."
+tags: [STM32, Embedded Systems, C, Servo Control, State Machine, UART, Timers, PWM, Real Time]
+---
+
+<h2>Project Overview</h2>
+<p>
+This educational project demonstrates how to design and implement a robust dual-servo control system using an STM32 microcontroller. By utilizing structured state machines, PWM timer channels, user command processing over UART, and error management, this project exemplifies embedded system principles for motor control and interactive systems.
+</p>
+
+<h2>Hardware and Peripherals</h2>
+<ul>
+  <li><b>MCU:</b> STM32 (tested on STM32L4 series)</li>
+  <li><b>Servos:</b> Two generic hobby servos (PWM-controlled)</li>
+  <li><b>UART:</b> UART2 for user command input/output</li>
+  <li><b>Timers:</b> TIM2 for dual PWM output; TIM4 for periodic (100ms) interrupt</li>
+  <li><b>GPIO:</b> Two output pins for status LEDs</li>
+</ul>
+
+<h2>Software Architecture</h2>
+
+<h3>1. State Machine Framework</h3>
+<p>
+The core of the servo control project is a finite state machine (FSM) for each servo, as described in <code>state_machine.h/.c</code>. Each servo maintains its own <code>servo_t</code> struct, tracking position, state, loop counters, direction, and error conditions.
+</p>
+<ul>
+  <li>Servo states include <em>paused, moving, waiting, looping, error</em> and more.</li>
+  <li>Transitions occur on timer events, UART input (user commands), or recipe commands.</li>
+  <li>Error states are triggered by invalid or nested loop commands.</li>
+</ul>
+
+<h3>2. Recipe Execution</h3>
+<p>
+A "recipe" is a programmatic instruction set stored as a byte array, interpreted at runtime. Recipes can move the servo to precise positions, pause execution, and implement loops or direction reversals.
+</p>
+<ul>
+  <li>Recipes are defined using macros like <code>MOV</code>, <code>WAIT</code>, <code>LOOP</code>, <code>END_LOOP</code>, <code>REVERSE</code>, and <code>RECIPE_END</code>.</li>
+  <li>Each servo can be assigned a different recipe at runtime.</li>
+  <li>Looping and error detection (such as nested loops) is fully supported for educational purposes.</li>
+</ul>
+<p>
+Example of a recipe (from <code>recipes.c</code>):
+</p>
+<pre><code>unsigned char recipe1[] = {
+    MOV + 0,
+    MOV + 5,
+    LOOP + 1,
+    MOV + 1,
+    MOV + 4,
+    END_LOOP,
+    RECIPE_END
+};
+</code></pre>
+
+<h3>3. UART User Commands</h3>
+<p>
+UART2 is configured for asynchronous, interrupt-driven communication. The system displays available commands at startup and accepts two-letter inputs, one for each servo. Commands and effects include:
+</p>
+<table>
+  <tr><th>Command</th><th>Action</th></tr>
+  <tr><td>P</td><td>Pause Recipe Execution</td></tr>
+  <tr><td>C</td><td>Continue/Resume</td></tr>
+  <tr><td>R/L</td><td>Move Right/Left by one position</td></tr>
+  <tr><td>B</td><td>Begin Assigned Recipe</td></tr>
+  <tr><td>X</td><td>Cancel/Reset Recipe</td></tr>
+  <tr><td>V</td><td>Reverse Current Direction</td></tr>
+</table>
+<p>
+Upon receiving valid input, the system parses the buffer and applies appropriate state transitions or direct actions to the relevant servo.
+</p>
+
+<h3>4. Timer Logic and Interrupts</h3>
+<ul>
+  <li><b>TIM2</b> provides PWM generation for both servos on channels 1 and 2.</li>
+  <li><b>TIM4</b> triggers every 100ms, acting as the main scheduler for FSM updates and recipe execution.</li>
+  <li>UART reception and timer flags are handled using interrupt callbacks, ensuring a responsive system.</li>
+</ul>
+
+<h2>Implementation Highlights</h2>
+
+<h3>Initialization and Main Loop</h3>
+<pre><code>
+int main(void)
+{
+  // HAL and peripheral initialization
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  MX_USART2_UART_Init();
+  MX_TIM2_Init();
+  MX_TIM4_Init();
+
+  // PWM Outputs
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+
+  // Start timer interrupt (100ms)
+  HAL_TIM_Base_Start_IT(&htim4);
+
+  // UART reception interrupt (2 chars at a time)
+  HAL_UART_Receive_IT(&huart2, (uint8_t *)rx_buffer, 2);
+
+  // Welcome message and command help
+  usart2_transmit("Welcome to the Servo Control System!...");
+
+  // Main scheduler loop
+  while (1)
+  {
+      if (timer_flag) {
+          timer_flag = 0;
+          if (rx_flag) {
+              process_user_commands(rx_buffer);
+              HAL_UART_Receive_IT(&huart2, (uint8_t *)rx_buffer, 2);
+              rx_flag = 0;
+          }
+          // State machine handling for both servos
+          // LED status updates
+      }
+  }
+}
+</code></pre>
+
+<h3>Key Functions Explained</h3>
+<ul>
+  <li><code>process_user_commands()</code> - Parses UART buffer and triggers events for servo state machines.</li>
+  <li><code>process_servo_recipe()</code> - Steps through a recipe, executing "move", "wait", "loop", or "reverse" operations.</li>
+  <li><code>update_status_leds()</code> - Sets onboard LEDs to reflect running, paused, or error status for educational observability.</li>
+  <li><code>set_servo_position()</code> - Maps a recipe position value (0-5) to a corresponding PWM pulse width for the servo.</li>
+  <li>Error handling, such as invalid commands or nested loop detection, transitions the servo to a safe error state and disables further action until reset.</li>
+</ul>
+
+<h2>Experimentation and Extension</h2>
+<ul>
+  <li>Try writing your own recipes to produce complex motion patterns, including legal and illegal (for educational error handling) instruction sets.</li>
+  <li>Expand the command set, e.g., for direct position movement or synchronizing both servos.</li>
+  <li>Implement blocking or non-blocking waits and experiment with different servo types or hardware timers.</li>
+  <li>Test the system's response to fast, slow, or invalid UART commands to study debouncing and error recovery.</li>
+</ul>
+
+<h2>Educational Value</h2>
+<p>
+This project covers practical skills in:
+<ul>
+  <li>State machine architecture for reliability in embedded applications</li>
+  <li>PWM generation and timer configuration for precise control</li>
+  <li>UART-based user interface design</li>
+  <li>Error detection and reporting for safer system operation</li>
+  <li>Structured, modular code organization suitable for larger projects</li>
+</ul>
+The resulting codebase can serve as a robust starting point for any more advanced robotics, automation, or hands-on embedded system experimentation involving servos, actuators, or interactive control.
+</p>
+
+<h2>Source Code and Resources</h2>
+<ul>
+  <li>
+    <a href="https://github.com/mbaglo/MyProjects/tree/main/Real%20Time%20%26%20Embedded%20System/Project%202_Servo%20Control" target="_blank">
+      Project 2 - Servo Control Source Code
+    </a>
+  </li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+By integrating a structured state machine, flexible user interface, and rigorous error handling, this STM32 project illustrates best practices in embedded motor control. The code, hardware setup, and recipes provided are intended to help students, hobbyists, and educators replicate or adapt the system for their own learning and applications.
+</p>
