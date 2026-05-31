@@ -6,20 +6,23 @@ permalink: /research/
 
 # Research & Current Work
 
-Welcome! My academic focus is on embedded systems, real-time data analysis, and hardware-software integration—primarily for applications in sensing, automation, and intelligent signal processing.
+I am a Ph.D. student in Electrical and Computer Engineering at the Rochester Institute of Technology and a Graduate Research Assistant in the Respiratory Technology Lab.
 
-## Current Research
+My research sits at the intersection of embedded systems, sensing technologies, and computational modeling, aiming to create better tools for measuring and understanding inhalant behaviors and environmental exposures in real-world settings. I enjoy combining hardware, software, and analytical methods to tackle health-related challenges.
 
-- **Embedded Sensing and Edge Processing:**  
-  Investigating methods for robust, low-power sensor platforms that can process and transmit critical data in real-time. Ongoing work includes the development of prototypes for environmental monitoring and biomedical signal analysis.
+## Current Focus
 
-- **Real-Time Systems and Control:**  
-  Applying microcontroller platforms (e.g., STM32) to design and test time-critical applications, with an emphasis on control algorithms, accurate signal timing, and hands-on lab experimentation.
+- **Embedded & Wearable Sensing Systems:**  
+  Development of integrated hardware-software platforms for ambulatory monitoring, with a focus on characterizing behavior and exposures in natural environments.
 
-- **Data Analytics for Embedded Applications:**  
-  Exploring efficient ways to analyze sensor data on-device; methods include lightweight filtering, anomaly detection, and IoT data pipeline design.
+- **Puff Topography & Inhalant Use Analytics:**  
+  Designing sensor-based systems to record and quantify inhalation patterns, enabling detailed behavioral analysis for health studies.
 
-*I am currently preparing a manuscript on the integration of embedded sensor nodes with custom analytics pipelines, with early results presented in [sample venue or conference, if applicable].*
+- **Exposure Science & Measurement:**  
+  Creating and validating sensor-driven approaches for accurate assessment of individual exposures.
+
+- **Computational & Pharmacokinetic Modeling:**  
+  Linking sensor data with computational models to estimate real-world outcomes and understand constituent uptake.
 
 ---
 
@@ -43,16 +46,30 @@ A FreeRTOS-based simulation of a multi-teller bank, including queue management, 
 
 ---
 
-### Additional Coursework & Lab Projects
+### C Programming Fundamentals
+Collection of core algorithm practices and foundational programming assignments in C.  
+[Browse C projects](https://github.com/mbaglo/MyProjects/tree/main/C-Programming)
 
-- **C Programming Exercises:** Core algorithmic and system fundamentals in C.  
-  [Browse C projects](https://github.com/mbaglo/MyProjects/tree/main/C-Programming)
-- **Interface & Digital Electronics:** Circuit, device, and microcontroller interfacing adventures.  
-  [Browse electronics projects](https://github.com/mbaglo/MyProjects/tree/main/Interface%20and%20Digital%20Electronics)
+---
+
+### Interface & Digital Electronics
+Projects covering digital logic, microcontroller interfacing, and hands-on electronics lab work.  
+[Browse electronics projects](https://github.com/mbaglo/MyProjects/tree/main/Interface%20and%20Digital%20Electronics)
+
+---
+
+## Research Interests & Skills
+- Embedded systems
+- Ambulatory sensing
+- Puff topography monitoring
+- Exposure science
+- Computational modeling
+- Behavior-based yield modeling
+- Pharmacokinetic modeling
+- Wearable electronics & IoT
 
 ---
 
 *Interested in collaborating? Or would you like to know more about my current research? Feel free to [connect with me](mailto:gm6629@rit.edu)!*
 
-<!-- Optionally, add images from /assets/img/ as you see fit:
-![Lab Prototype](/assets/img/name_of_image.jpg) -->
+<!-- For images, add them using: ![Description](/assets/img/your_image.jpg) -->
