@@ -13,22 +13,14 @@
           <a href="{{ '/' | relative_url }}" style="text-decoration:none; color:inherit;">{{ site.title }}</a>
         </h1>
         <p class="site-tagline">{{ site.description }}</p>
-        <nav>
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/about/' | relative_url }}">About</a>
-          <a href="{{ '/blog/' | relative_url }}">Blog</a>
-          <a href="{{ '/cv/' | relative_url }}">CV & Publications</a>
-          <a href="{{ '/research/' | relative_url }}">Research</a>
-        </nav>
       </div>
     </header>
-
+    {% include navbar.html %}
     <div class="container">
-      <main>
+      <main id="main-content">
         {{ content }}
       </main>
     </div>
-
     <footer>
       <div class="container">
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} &mdash; {{ site.description }}</p>
