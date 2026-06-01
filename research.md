@@ -8,21 +8,21 @@ permalink: /research/
 
 I am a Ph.D. student in Electrical and Computer Engineering at the Rochester Institute of Technology and a Graduate Research Assistant in the Respiratory Technology Lab.
 
-My research sits at the intersection of embedded systems, sensing technologies, and computational modeling, aiming to create better tools for measuring and understanding inhalant behaviors and environmental exposures in real-world settings. I enjoy combining hardware, software, and analytical methods to tackle health-related challenges.
+My research combines embedded system development, sensor validation, and computational modeling to advance the measurement and interpretation of inhalant product use and exposure. I focus on developing, validating, and deploying advanced puff topography monitors to capture high-quality behavioral and emissions data in both laboratory and ambulatory settings. I also integrate analytical and modeling methods to connect user behavior with exposure outcomes and support reproducible, measurement-driven research.
 
 ## Current Focus
 
-- **Embedded & Wearable Sensing Systems:**  
-  Development of integrated hardware-software platforms for ambulatory monitoring, with a focus on characterizing behavior and exposures in natural environments.
+- **Embedded sensing and monitor development:**  
+  Designing and evaluating sensing systems for inhalant topography measurement, including long-term performance assessment and validation of monitoring devices.
 
-- **Puff Topography & Inhalant Use Analytics:**  
-  Designing sensor-based systems to record and quantify inhalation patterns, enabling detailed behavioral analysis for health studies.
+- **Behavioral and exposure data analysis:**  
+  Developing methods for quality control, interpretation, and analysis of puff topography, session behavior, and behavior-based yield data collected in extended human subject studies.
 
-- **Exposure Science & Measurement:**  
-  Creating and validating sensor-driven approaches for accurate assessment of individual exposures.
+- **Computational and pharmacokinetic modeling:**  
+  Applying computational and PK-informed modeling approaches to relate behavioral measurements with biomarker and exposure outcomes.
 
-- **Computational & Pharmacokinetic Modeling:**  
-  Linking sensor data with computational models to estimate real-world outcomes and understand constituent uptake.
+- **Data-driven health research tools:**  
+  Using structured analysis pipelines and modern quantitative methods to support regulatory science and ambulatory exposure research.
 
 ---
 
@@ -46,6 +46,18 @@ A FreeRTOS-based simulation of a multi-teller bank, including queue management, 
 
 ---
 
+### Digital IC Design Labs and Project
+A collection of digital IC design labs and project work covering foundational and intermediate design concepts, circuit implementation, and applied digital systems development.  
+[Browse Digital IC Designs](https://github.com/mbaglo/MyProjects/tree/main/Digital%20IC%20Designs)
+
+---
+
+### Deep Learning Lab Work
+Coursework and lab exercises focused on deep learning methods, model development, and practical experimentation with neural-network-based systems.  
+[View Deep Learning Lab 3](https://github.com/mbaglo/MyProjects/tree/main/Deep%20Learning/Labs/Lab3)
+
+---
+
 ### C Programming Fundamentals
 Collection of core algorithm practices and foundational programming assignments in C.  
 [Browse C projects](https://github.com/mbaglo/MyProjects/tree/main/C-Programming)
@@ -59,14 +71,14 @@ Projects covering digital logic, microcontroller interfacing, and hands-on elect
 ---
 
 ## Research Interests & Skills
-- Embedded systems
-- Ambulatory sensing
+- Embedded systems and sensor validation
+- Ambulatory sensing and behavioral data pipelines
 - Puff topography monitoring
-- Exposure science
-- Computational modeling
-- Behavior-based yield modeling
-- Pharmacokinetic modeling
-- Wearable electronics & IoT
+- Exposure science and measurement systems
+- Computational and pharmacokinetic modeling
+- Behavior-based yield analysis
+- Digital system design
+- Deep learning and data-driven modeling
 
 ---
 
