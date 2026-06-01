@@ -6,8 +6,6 @@ description: "On the value of documentation in research, and how it impacts the 
 excerpt: "One of the most valuable habits in graduate research is consistent documentation. Writing down what I am learning helps me clarify patterns and sharpen questions. This post reflects on why documentation matters in research and technical work."
 ---
 
-*Published May 29, 2026*
-
 One of the most valuable habits in graduate research is consistent documentation. Whether the work involves experiments, embedded systems development, data analysis, or modeling, keeping a clear record helps make the work more useful, reproducible, and meaningful over time.
 
 Documentation transforms scattered observations into structured knowledge. Notes from a failed experiment, a sensor calibration problem, or an unexpected modeling result often become useful later in ways that are not obvious at the time. Good documentation preserves context, supports continuity, and makes it easier to revisit work with clarity.
