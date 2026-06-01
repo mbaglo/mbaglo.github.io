@@ -52,9 +52,9 @@ A collection of digital IC design labs and project work covering foundational an
 
 ---
 
-### Deep Learning Lab Work
-Coursework and lab exercises focused on deep learning methods, model development, and practical experimentation with neural-network-based systems.  
-[View Deep Learning Lab 3](https://github.com/mbaglo/MyProjects/tree/main/Deep%20Learning/Labs/Lab3)
+### Deep Learning Coursework and Project Work
+A growing collection of homework, lab, reference, and project work exploring neural networks, model development, and applied deep learning experimentation.  
+[Browse Deep Learning work](https://github.com/mbaglo/MyProjects/tree/main/Deep%20Learning)
 
 ---
 
