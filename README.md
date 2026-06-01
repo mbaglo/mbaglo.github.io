@@ -5,7 +5,6 @@ This repository contains the source for the academic website of **Chinyere Glori
 ## Site Structure
 
 - `index.md` — Home page with profile summary, research interests, and key links.
-- `about.md` — Biography and academic background.
 - `research.md` — Research focus, projects, and current work.
 - `cv.md` — CV and selected publications/presentations.
 - [`_posts/`](https://github.com/mbaglo/mbaglo.github.io/tree/main/_posts) — Blog articles in Markdown format (`YYYY-MM-DD-title.md`).
@@ -25,7 +24,7 @@ excerpt: "Optional summary for card/excerpt displays."
 
 ## Purpose
 
-This website presents academic background, research interests, and professional milestones in a clean, static format suitable for GitHub Pages.
+This website presents academic background, research interests, technical projects, and professional milestones in a clean, static format suitable for GitHub Pages.
 
 ## Deployment
 

@@ -6,7 +6,7 @@ permalink: /blog/
 
 # Blog
 
-Welcome to the research and technical blog! For more about me and my work, see the [About](/about/) or [Research](/research/) pages.
+Welcome to my research and technical blog. This space highlights reflections on doctoral study, research documentation, embedded systems work, and project-based learning. You can also explore my [Research](/research/) and [CV](/cv/) pages for a broader overview of my work.
 
 {% for post in site.posts %}
 ---
