@@ -9,7 +9,7 @@ permalink: /about/
 ## Biography
 I am a Ph.D. student in Electrical and Computer Engineering at the Rochester Institute of Technology and a Graduate Research Assistant in the Respiratory Technology Lab. 
 
-My academic and professional interests include embedded systems, ambulatory sensing, puff topography monitoring, exposure science, and computational modeling—particularly how hardware, software, and measurement intersect to solve real-world health problems.
+My academic and professional interests include embedded systems, ambulatory sensing, puff topography monitoring, exposure science, and computational modeling—particularly how hardware, software, and data analysis can be combined to support measurement and interpretation in health-related research.
 
 ## Academic Interests
 - Embedded systems and sensor integration

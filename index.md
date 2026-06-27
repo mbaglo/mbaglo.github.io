@@ -1,9 +1,9 @@
 ---
-title: Home
 layout: default
+title: Home
 ---
 
-<img src="/assets/img/gloria_mbaka_rit.jpg" alt="Chinyere Gloria Mbaka at RIT" style="width: 100%; max-width:1100px; display: block; margin: 0 auto 2rem auto; border-radius: 2.5rem; box-shadow: 0 12px 56px #abc3dd44;">
+<img src="/assets/img/gloria_mbaka_rit.jpg" alt="Chinyere Gloria Mbaka at RIT" style="width: 100%; max-width:1100px; display: block; margin: 0 auto 2rem auto; border-radius: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
 
 # Hi, I'm Gloria!
 ### Ph.D. Student in Electrical & Computer Engineering @ RIT

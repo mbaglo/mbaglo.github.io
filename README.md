@@ -6,13 +6,17 @@ This repository contains the source for the academic website of **Chinyere Glori
 
 - `index.md` — Home page with profile summary, research interests, and key links.
 - `research.md` — Research focus, projects, and current work.
+- `about.md` — Biography and academic interests.
 - `cv.md` — CV and selected publications/presentations.
+- `gallery.md` — Photo and video gallery.
+- `blog.md` — Blog index.
 - [`_posts/`](https://github.com/mbaglo/mbaglo.github.io/tree/main/_posts) — Blog articles in Markdown format (`YYYY-MM-DD-title.md`).
 
 ## Blog
+
 To add a new blog post, create a Markdown file in the [`_posts/`](https://github.com/mbaglo/mbaglo.github.io/tree/main/_posts) directory, named as `YYYY-MM-DD-title-of-post.md`, with YAML front matter like:
 
-```
+```md
 ---
 layout: post
 title: "Title of Post"
@@ -29,6 +33,3 @@ This website presents academic background, research interests, technical project
 ## Deployment
 
 This site is built and published with GitHub Pages from this repository.
-
----
-Jekyll manages all global information like site title, author, and description via `_config.yml` and [Liquid](https://jekyllrb.com/docs/liquid/) variables, ensuring consistent display across all pages and in the layout header/footer. For updates, change your information in `_config.yml` — not in every file.

@@ -8,7 +8,7 @@ permalink: /research/
 
 I am a Ph.D. student in Electrical and Computer Engineering at the Rochester Institute of Technology and a Graduate Research Assistant in the Respiratory Technology Lab.
 
-My research combines embedded system development, sensor validation, and computational modeling to advance the measurement and interpretation of inhalant product use and exposure. I focus on developing, validating, and deploying advanced puff topography monitors to capture high-quality behavioral and emissions data in both laboratory and ambulatory settings. I also integrate analytical and modeling methods to connect user behavior with exposure outcomes and support reproducible, measurement-driven research.
+My research combines embedded system development, sensor validation, and computational modeling to advance the measurement and interpretation of inhalant product use and exposure. I focus on developing reliable sensing systems, analyzing behavioral and exposure data, and applying computational methods to connect measurements with biological outcomes.
 
 ## Current Focus
 
@@ -29,13 +29,13 @@ My research combines embedded system development, sensor validation, and computa
 ## Selected Projects
 
 ### Signal Timing Measurement (Real-Time Lab)
-Developed C firmware for high-precision timing measurement using input capture on STM32 microcontrollers. Features interactive user configuration, automatic statistics generation, and robust UART communication for results monitoring.  
+Developed C firmware for high-precision timing measurement using input capture on STM32 microcontrollers. Features interactive user configuration, automatic statistics generation, and robust UART communication. 
 [View code](https://github.com/mbaglo/MyProjects/tree/main/Real%20Time%20%26%20Embedded%20System/Project%201_Timing)
 
 ---
 
 ### Dual Servo Controller via State Machine
-Designed and implemented a state-machine-based controller for simultaneous two-servo control. Supported flexible "recipe" execution, error handling, real-time status LEDs, and user UART command interface.  
+Designed and implemented a state-machine-based controller for simultaneous two-servo control. Supported flexible "recipe" execution, error handling, real-time status LEDs, and user UART command input.
 [View code](https://github.com/mbaglo/MyProjects/tree/main/Real%20Time%20%26%20Embedded%20System/Project%202_Servo%20Control)
 
 ---
